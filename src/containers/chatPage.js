@@ -1,4 +1,4 @@
-import ContactsList from "./../components/contactsList";
+import ChatPage from "./../components/chatPage";
 import {openChat} from "./../actions/contactsList";
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -15,7 +15,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(
-  mapStateToProps,
-    mapDispatchToProps
-)(ContactsList);
+export default connect( mapStateToProps, mapDispatchToProps)(ChatPage);

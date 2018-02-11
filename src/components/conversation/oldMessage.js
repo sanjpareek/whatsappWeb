@@ -3,9 +3,10 @@ import React, {Component} from 'react'
 export default class OldMessage extends Component{
   render(){
     return(
-      <div class="row message-previous">
-        <div class="col-sm-12 previous">
-          <a onclick="" name="20">Show Previous Message</a>
+      <div className="row message-previous">
+        <div className="col-sm-12 previous">
+          <a name="20">Show Previous Message</a>
+        </div>
         </div>
     )
   }

@@ -2,14 +2,17 @@ import React, {Component} from "react"
 
 import NewTextArea from './newTextArea.js'
 import Header from './header.js'
+import OldMessage from './oldMessage'
+import Message from './message'
+
 
 export default class Conversation extends Component{
   render(){
-    const{message}=this.props;
+    const{message, name}=this.props;
     return(
       <div>
-        <Header/>
-       <div class="row message" id="conversation">
+        <Header name={name}/>
+       <div className="row message">
           <OldMessage/>
           <Message type='receiver' message={message}/>
           <Message type="sender" message={message}/>

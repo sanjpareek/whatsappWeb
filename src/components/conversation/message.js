@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 
-export default className Message extends Component{
+export default class Message extends Component{
   render(){
     if(this.props.message){
       const{type,message}=this.props;
@@ -19,6 +19,8 @@ export default className Message extends Component{
           </div>
         </div>
       )
+    }else{
+      return null
     }
   }
 }

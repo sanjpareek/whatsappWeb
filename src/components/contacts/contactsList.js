@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 
 export default class ContactsList extends Component {
   render() {
-    const{name, openChatco}=this.props;
+    const{name, openChat}=this.props;
     return (
-    <span className="side-one" onclick={openChat}>
+    <span className="side-one" onClick={(e)=>{e.stopPropagation();openChat(name)}}>
            <span className="row sideBar">
               <span className="row sideBar-body">
                 <span className="col-sm-3 col-xs-3 sideBar-avatar">
