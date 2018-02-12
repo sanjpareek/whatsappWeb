@@ -23,6 +23,6 @@ Steps to start the project:
 
 4. To start the application:
 
-npm start
+        npm start
 
 
