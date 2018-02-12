@@ -1,12 +1,13 @@
-export const OPEN_CHAT = 'OPEN_CHAT'
+export const RECEIVED = 'MSG_RECEIVED'
 
 export default (state={},action) => {
   switch (action.type) {
-    case OPEN_CHAT:
+    case RECEIVED:
     return{
       ...state,
-      selectedName : action.name
+      msgReceived : action.msgReceived
     }
+
     default:
       return{
         ...state

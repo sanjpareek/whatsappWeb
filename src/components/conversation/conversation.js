@@ -8,7 +8,7 @@ import Message from './message'
 
 export default class Conversation extends Component{
   render(){
-    const{message, name}=this.props;
+    const{message, name, sendMessage}=this.props;
     return(
       <div>
         <Header name={name}/>
@@ -17,7 +17,7 @@ export default class Conversation extends Component{
           <Message type='receiver' message={message}/>
           <Message type="sender" message={message}/>
        </div>
-         <NewTextArea/>
+         <NewTextArea sendMessage={sendMessage} contactName={name}/>
        </div>
     )
   }

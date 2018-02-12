@@ -3,7 +3,7 @@ import React, {Component} from "react"
 import Header from './contacts/header.js'
 import SearchBar from './contacts/searchBar.js'
 import ContactsList from './contacts/contactsList.js'
-import {fetchContactsList} from './../actions/contacts.js'
+import {fetchContactsList} from './../utils/contacts.js'
 import Conversation from './conversation/conversation.js'
 
 export default class ChatPage extends Component{
@@ -40,7 +40,7 @@ export default class ChatPage extends Component{
                 {contactRows}
               </div>
                <div className="col-sm-8 conversation">
-                  {this.state.selectedName && <Conversation name={this.state.selectedName}/>}
+                  {this.state.selectedName && <Conversation name={this.state.selectedName} sendMessage={this.props.sendMessage}/>}
               </div>
             </div>
         </div>

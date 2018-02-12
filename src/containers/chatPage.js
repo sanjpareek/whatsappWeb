@@ -1,5 +1,5 @@
 import ChatPage from "./../components/chatPage";
-import {openChat} from "./../actions/contactsList";
+import {sendMessage} from "./../actions/contactsList";
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
@@ -11,7 +11,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    	actions: bindActionCreators(openChat, dispatch)
+    	sendMessage : () => {dispatch(sendMessage())}
     };
 }
 
