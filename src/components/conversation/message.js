@@ -6,8 +6,8 @@ export default class Message extends Component{
       const{type,message}=this.props;
       const classMain = type==="sender"? "message-main-sender" : "message-main-receiver";
       return(
-        <div className="row message-body">
-          <div className={"col-sm-12 " + classMain}>
+        <div className="message-body">
+          <div className={"col-xs-12 " + classMain}>
             <div className={type}>
               <div className="message-text">
                 {message}
