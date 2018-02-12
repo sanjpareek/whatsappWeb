@@ -12,7 +12,7 @@ Tech Stack :
 Steps to start the project:
 
 1. Clone the project
-2. Install node, npm
+2. Install node, npm in your system if not already present
 3. Run the following commands on terminal:
 
         npm install --save react-redux
