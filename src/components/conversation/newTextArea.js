@@ -13,6 +13,10 @@ export default class NewTextArea extends Component{
       this.setState({msg:e.target.value})
     }
   }
+
+  sendMessage(){
+    this.props.sendMessage(this.props.contactName, this.state.msg);
+  }
   render(){
     const{sendMessage, contactName}=this.props;
     return(
@@ -26,7 +30,7 @@ export default class NewTextArea extends Component{
          <div className="col-sm-1 col-xs-1 reply-recording">
            <i className="fa fa-microphone fa-2x" aria-hidden="true"></i>
          </div>
-         <div className="col-sm-1 col-xs-1 reply-send" onClick={()=>sendMessage(contactName,this.state.msg)}>
+         <div className="col-sm-1 col-xs-1 reply-send" onClick={()=>this.sendMessage()}>
            <i className="fa fa-send fa-2x" aria-hidden="true"></i>
          </div>
        </div>

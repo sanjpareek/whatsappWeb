@@ -1,17 +1,17 @@
 import ChatPage from "./../components/chatPage";
-import {sendMessage} from "./../actions/contactsList";
+import {sendMessage} from "./../actions/chatPage";
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 function mapStateToProps(state) {
   return {
-    	contactsList: state.contactsList
+    	ChatPage: state.ChatPage
     };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    	sendMessage : () => {dispatch(sendMessage())}
+    	sendMessage : (contactName, message) => {dispatch(sendMessage(contactName, message))}
     };
 }
 

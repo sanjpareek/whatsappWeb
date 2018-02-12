@@ -8,14 +8,14 @@ import Message from './message'
 
 export default class Conversation extends Component{
   render(){
-    const{message, name, sendMessage}=this.props;
+    const{message, name, sendMessage,isMessageSent,isMessageReceived, sentText, receivedText}=this.props;
     return(
       <div>
         <Header name={name}/>
        <div className="row message">
           <OldMessage/>
-          <Message type='receiver' message={message}/>
-          <Message type="sender" message={message}/>
+          {isMessageSent && <Message type='receiver' message={sentText}/>}
+          {isMessageReceived && <Message type="sender" message={receivedText}/>}
        </div>
          <NewTextArea sendMessage={sendMessage} contactName={name}/>
        </div>

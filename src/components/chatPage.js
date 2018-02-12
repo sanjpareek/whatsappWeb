@@ -26,7 +26,7 @@ export default class ChatPage extends Component{
   }
 
   render(){
-      const{selectedName}=this.props;
+      const{selectedName, sentText, receivedText, messageSent, messageReceived}=this.props.ChatPage;
       var contactRows=[];
       for (var i = 0; i < this.state.contacts.length; i++) {
           contactRows.push(<ContactsList key={i} name={this.state.contacts[i]} openChat={this.openChat} />);
@@ -40,7 +40,9 @@ export default class ChatPage extends Component{
                 {contactRows}
               </div>
                <div className="col-sm-8 conversation">
-                  {this.state.selectedName && <Conversation name={this.state.selectedName} sendMessage={this.props.sendMessage}/>}
+                  {this.state.selectedName && <Conversation name={this.state.selectedName} sendMessage={this.props.sendMessage}
+                  isMessageSent={messageSent} sentText={sentText} receivedText={receivedText}
+                  isMessageSent={messageSent} isMessageReceived={messageReceived}/>}
               </div>
             </div>
         </div>

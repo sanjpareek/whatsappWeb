@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import contactsList from './../reducers/contactList'
+import ChatPage from './../reducers/chatPage'
 
 export default combineReducers({
-  contactsList
+  ChatPage
 })
