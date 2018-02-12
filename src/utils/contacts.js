@@ -1,6 +1,5 @@
 
-export function fetchContactsList(){
-  return [
+export const names = [
     "Jon Senna",
     "Rob Van Dam",
     "Gilbert Thord",
@@ -11,4 +10,3 @@ export function fetchContactsList(){
     "Cindrella",
     "Mark Twain"
   ]
-}

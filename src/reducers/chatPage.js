@@ -1,6 +1,7 @@
 import * as actionType from  "./../constants/actions"
+import {names} from './../utils/contacts.js'
 
-export default (state={},action) => {
+export default (state={names:names},action) => {
   switch (action.type) {
     case actionType.RECEIVED:
     return{
