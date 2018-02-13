@@ -7,10 +7,10 @@ export function sendMessage(contactName, message){
       websocket.onopen = (evt) => {
          dispatch(_onOpen(evt,message));
          websocket.send(message);
-         dispatch(_onSend(evt,message));
+         dispatch(_onSend(evt,message,contactName));
         };
       websocket.onclose = (evt) => { dispatch(_onClose(evt)) };
-      websocket.onmessage = (evt) => { dispatch(_onMessage(evt)) };
+      websocket.onmessage = (evt) => { dispatch(_onMessage(evt,contactName)) };
       websocket.onerror = (evt) =>  { dispatch(_onError(evt)) };
     }
 }
@@ -29,8 +29,9 @@ function _onClose(evt){
   })
 }
 
-function _onMessage(evt){
+function _onMessage(evt,contactName){
   return({
+    contactName : contactName,
     type : actionType.RECEIVED,
     receivedText : evt.data
   })
@@ -43,8 +44,9 @@ function _onError(evt){
   })
 }
 
-function _onSend(evt,sentText){
+function _onSend(evt,sentText,contactName){
   return({
+    contactName : contactName,
     type : actionType.SENT,
     sentText : sentText
   })
