@@ -5,7 +5,10 @@ export default (state={},action) => {
   switch (action.type) {
     case actionType.RECEIVED:
       newState = {...state[action.contactName]};
-      newState.receivedText = action.receivedText;
+      if(!newState.receivedText){
+        newState.receivedText=[];
+      }
+      newState.receivedText.push(action.receivedText);
       newState.messageReceived = true;
       return{
         ...state,
@@ -14,7 +17,10 @@ export default (state={},action) => {
 
     case actionType.SENT:
       newState = {...state[action.contactName]};
-      newState.sentText = action.sentText;
+      if(!newState.sentText){
+        newState.sentText=[];
+      }
+      newState.sentText.push(action.sentText);
       newState.messageSent = true;
       return{
         ...state,
