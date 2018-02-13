@@ -7,11 +7,6 @@ import Message from './message'
 
 
 export default class Conversation extends Component{
-  // componentWillReceiveProps(newProps){
-  //   if(newProps.name !== this.state.name){
-  //     this.props.resetStates();
-  //   }
-  // }
   render(){
     const{message, name, sendMessage,isMessageSent,isMessageReceived, sentText, receivedText}=this.props;
     return(

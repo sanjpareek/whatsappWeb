@@ -1,6 +1,3 @@
-import Conversation from './../components/conversation/conversation.js'
-import React from "react"
-import Socket from "./../utils/socket"
 import {WS_URI, status} from "./../constants/componentConstants"
 import * as actionType from  "./../constants/actions"
 

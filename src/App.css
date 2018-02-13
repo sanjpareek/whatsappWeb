@@ -319,11 +319,11 @@ body {
 .message {
   padding: 0 !important;
   margin: 0 !important;
-  /*background: url("w.jpg") no-repeat fixed center;*/
   background-size: cover;
   overflow-y: auto;
   border: 1px solid #f7f7f7;
   height: calc(100% - 120px);
+  height : 100%
 }
 .message-previous {
   margin : 0 !important;
@@ -351,7 +351,7 @@ body {
 }
 
 .message-main-receiver {
-  /*padding: 10px 20px;*/
+  padding: 10px 20px;
   max-width: 60%;
 }
 
