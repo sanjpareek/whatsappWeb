@@ -16,6 +16,8 @@ export default class NewTextArea extends Component{
 
   sendMessage(){
     this.props.sendMessage(this.props.contactName, this.state.msg);
+    let text = this.refs.text;
+    text.value = "";
   }
   render(){
     const{sendMessage, contactName}=this.props;
@@ -25,7 +27,7 @@ export default class NewTextArea extends Component{
            <i className="fa fa-smile-o fa-2x"></i>
          </div>
          <div className="col-sm-9 col-xs-9 reply-main">
-           <textarea className="form-control" rows="1" onChange={this.setMessage.bind(this)}></textarea>
+           <textarea className="form-control" rows="1" onChange={this.setMessage.bind(this)} ref="text"></textarea>
          </div>
          <div className="col-sm-1 col-xs-1 reply-recording">
            <i className="fa fa-microphone fa-2x" aria-hidden="true"></i>
